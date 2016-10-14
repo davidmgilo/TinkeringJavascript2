@@ -52,7 +52,7 @@ Animal.prototype.eat = function() {
 //Creating an instance would throw an error:
 // new Animal(); // throws
 
-//This is how you "inherit" from it:
+//This is how you "inherit" from it: SYNTAX SUGAR
 var Cat = function() {
     Animal.apply(this, arguments);
     // Cat initialization...
