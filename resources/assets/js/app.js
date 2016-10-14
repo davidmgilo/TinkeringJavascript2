@@ -20,65 +20,15 @@ const app = new Vue({
 });
 
 
-// EXEMPLE IMPLEMENTACIÓ CLASSES ABSTRACTES
-// Cal sempre herència:
-// https://www.youtube.com/watch?v=wfMtDGfHWpA
+var animals = require('./animal');
+var gossos = require('./dog');
+var gats = require('./cat');
 
-/**
- @constructor
- @abstract
- */
-var Animal = function() {
-    if (this.constructor === Animal) {
-        throw new Error("Can't instantiate abstract class!");
-    }
-    // Animal initialization...
-};
-
-/**
- @abstract
- */
-Animal.prototype.say = function() {
-    throw new Error("Abstract method!");
-}
-
-/**
- * Eat some food
- */
-Animal.prototype.eat = function() {
-    console.log("Animal is eating.");
-}
-
-//Creating an instance would throw an error:
-// new Animal(); // throws
-
-//This is how you "inherit" from it: SYNTAX SUGAR
-var Cat = function() {
-    Animal.apply(this, arguments);
-    // Cat initialization...
-};
-Cat.prototype = Object.create(Animal.prototype);
-Cat.prototype.constructor = Cat;
-
-Cat.prototype.say = function() {
-    console.log('meow');
-}
-
-// Dog looks just like it.
-var Dog = function() {
-    Animal.apply(this, arguments);
-};
-Dog.prototype = Object.create(Animal.prototype);
-Dog.prototype.constructor = Dog;
-
-Dog.prototype.say = function() {
-    console.log('bark');
-}
 //
 //     And this is how your scenario plays out:
 
-var cat = new Cat();
-var dog = new Dog();
+var cat = new gats.Cat();
+var dog = new gossos.Dog();
 
 cat.eat();
 dog.eat();
