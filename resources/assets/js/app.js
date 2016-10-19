@@ -21,16 +21,20 @@ const app = new Vue({
 
 //jQuery.ajax(); Executa un XHR de JS utilitzant jquery
 //http://api.jquery.com/jquery.ajax/
-$.ajax();
+//$.ajax();
 
 //HTTP Request de tipus GET
 // tipus opcional, si no hi ha aquest camp és GET
 
-$.ajax({
-    type: "GET",
-    url: 'http://localhost:8000/apicutre/user/1',
-    success: function (result) {
-        console.log("Ajax ok!");
-        console.log(result);
-    }
+//CSS Selectors
+$("#getuser").click(function () {
+    $.ajax({
+        type: "GET",
+        url: 'http://localhost:8000/apicutre/user/1',
+        success: function (result) {
+            console.log("Ajax ok!");
+            console.log(result);
+        }
+    });
 });
+
