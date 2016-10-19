@@ -16,7 +16,7 @@
             <div class="col-md-4 col-md-offset-4">
                 <button id="getuser" class="btn btn-primary">Get user</button>
 
-                Usuari: <input type="text" id ="user"/>
+                Usuari: <input type="text" id ="user" name="user">
             </div>
         </div>
     </div>
