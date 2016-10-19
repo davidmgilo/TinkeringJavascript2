@@ -34,6 +34,7 @@ $("#getuser").click(function () {
         success: function (result) {
             console.log("Ajax ok!");
             console.log(result);
+            $("#user").val(result);
         }
     });
 });
