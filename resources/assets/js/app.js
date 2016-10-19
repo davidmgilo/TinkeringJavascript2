@@ -23,11 +23,14 @@ const app = new Vue({
 //http://api.jquery.com/jquery.ajax/
 $.ajax();
 
-//GET
+//HTTP Request de tipus GET
+// tipus opcional, si no hi ha aquest camp és GET
 
 $.ajax({
     type: "GET",
-    url: 'http:localhost:8000/apicutre/user/1',
-    data: data,
-    success: success
+    url: 'http://localhost:8000/apicutre/user/1',
+    success: function (result) {
+        console.log("Ajax ok!");
+        console.log(result);
+    }
 });
