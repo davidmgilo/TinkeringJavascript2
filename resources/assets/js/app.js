@@ -35,6 +35,9 @@ $("#getuser").click(function () {
             console.log("Ajax ok!");
             console.log(result);
             $("#user").val(result);
+        },
+        error: function () {
+            console.log("Ha petat petició ajax")
         }
     });
 });

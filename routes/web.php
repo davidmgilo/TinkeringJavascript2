@@ -16,5 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('/apicutre/user/1', function () {
+    abort(500);
     return "Usuari 1";
 });
