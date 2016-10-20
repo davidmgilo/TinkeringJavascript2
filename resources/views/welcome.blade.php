@@ -17,8 +17,17 @@
                 <button id="getuser" class="btn btn-primary">Get user</button>
 
                 Usuari: <input type="text" id ="user" name="user">
+
+
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                Usuari: <input type="text" id ="userpost" name="userpost" value="David">
+                <button id="postuser" class="btn btn-primary">Post user</button>
+            </div>
+        </div>
+
     </div>
 
 </div>
