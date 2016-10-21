@@ -22,5 +22,5 @@ Route::get('/apicutre/user/1', function () {
 });
 
 Route::post('/apicutre/user/1',function (){
-    return $_POST;
+    return $_POST['name'];
 });
